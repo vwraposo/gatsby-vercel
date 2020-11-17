@@ -7,6 +7,7 @@ function Index() {
   useEffect(() => {
     async function getDate() {
       const res = await fetch('/api/date');
+      console.log('RES', res)
       const newDate = await res.text();
       setDate(newDate);
     }
